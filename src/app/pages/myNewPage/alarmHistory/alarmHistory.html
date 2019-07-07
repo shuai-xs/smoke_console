@@ -1,0 +1,43 @@
+
+<div style="width: 386px;height: 220px;background-color: #1d2b36;padding: 0px 5px;box-sizing: border-box;display: flex;flex-direction: column;line-height: normal">
+    <div style="font-size: 13px;display: flex;justify-content: space-between;flex:1 0 auto;padding-top: 5px;border-bottom: 1px solid #434a4d">
+        <div style="">
+
+            <!--<span class="alarm-history-active" ng-click="clkHistoryBar()">历史告警分布图</span>-->
+            <!--<span class="alarm-history-noactive" ng-click="clkCurTable()">当前告警分布图</span>-->
+
+            <span ng-class="alarmbar" ng-click="clkHistoryBar()" style="border-right: #668b8c 1px solid;padding-right: 10px;">历史告警分布图</span>
+            <span ng-class="alarmtable" ng-click="clkCurTable()" style="margin-left: 10px;">当前告警分布图</span>
+        </div>
+
+        <a style="color: #108ee9">更多 >></a>
+    </div>
+    <div style="width: 376px;height:180px;" ng-show="displayAlmBar">
+        <div ng-echarts  style="width: 376px;height:180px;" ec-config="alarmHistoryConfig" ec-option="alarmHistoryOption"  id="alarmHistory"></div>
+    </div>
+
+    <div  style="width: 376px;height:180px;font-weight: 100" ng-show="!displayAlmBar">
+        <div class="horizontal-scroll">
+            <table class="table" st-table="smartTableData">
+                <thead>
+                <tr >
+                    <th class="table-id" st-sort="id" st-sort-default="true">序号</th>
+                    <th st-sort="warehouse">分仓</th>
+                    <th st-sort="requirementName">设备名称</th>
+                    <th st-sort="count">异常百分比</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in smartTableData">
+                    <td class="table-id cur-alarm-td-height" style="line-height: 25px">{{item.id}}</td>
+                    <td style="line-height: 25px">{{item.warehouse}}</td>
+                    <td style="line-height: 25px">{{item.requirementName}}</td>
+                    <td style="line-height: 25px">{{item.percent}}</td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+

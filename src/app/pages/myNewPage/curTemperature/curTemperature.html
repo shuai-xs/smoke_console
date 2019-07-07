@@ -1,0 +1,24 @@
+<div style="background-color: #1d2b36;width: 386px;height:180px;box-sizing: border-box;font-size: 12px;color:#cccccc;">
+    <div style="display: flex;padding:10px 10px 0 10px;justify-content: space-between;flex: 1 0 auto">
+        <div>
+            当前温度
+        </div>
+        <div style="display: flex;flex: 0.2 0 auto">
+            <div style="display: flex;align-items: center;flex: 1 1 auto;justify-content: space-around">
+                <div style="height: 8px;width: 8px;border-radius: 4px;background-color: #48a8ed"></div>
+                <div>综合仓</div>
+            </div>
+            <div style="display: flex;align-items: center;flex: 1 1 auto;justify-content: space-around">
+                <div style="height: 8px;width: 8px;border-radius: 4px;background-color: #ffcc33"></div>
+                <div>燃气仓</div>
+            </div>
+            <div style="display: flex;align-items: center;flex: 1 1 auto;justify-content: space-around">
+                <div style="height: 8px;width: 8px;border-radius: 4px;background-color: #ff6600"></div>
+                <div>电力仓</div>
+            </div>
+        </div>
+    </div>
+    <div ng-echarts style="width: 386px;height:155px;box-sizing: border-box;" ec-config="curTemperatureConfig"
+         ec-option="curTemperatureOption" id="curTemperature">
+    </div>
+</div>

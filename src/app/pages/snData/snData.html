@@ -1,0 +1,225 @@
+<style>
+    .sndata-date-type-color-select{
+        color:#1a75dd
+    }
+
+    .sndata-date-type-color{
+        color:#fff
+    }
+</style>
+
+<div style="width: 100%;height: 430px;border: 1px solid #666;padding-right: 10px;box-sizing: border-box;font-size: 12px;">
+    <div style="width: 100%;height: 46px;display: flex;align-items: center;border-bottom: 1px solid #666">
+        <div style="display: flex;align-items: center;flex: 1 0 auto">
+            <div>当前数据：</div>
+            <div style="margin-left: 10px">
+                <select style="color:#000000;height: 25px;background-color: #0c5460">
+                    <option style="background-color: #6b78dd">
+                        宝塔区 / 燃气舱 / 1区（桩：200）
+                    </option>
+                    <option style="background-color: #1a75dd">
+                        宝塔区 / 燃气舱 / 1区（桩：200）
+                    </option>
+                </select>
+            </div>
+            <div style="margin-left: 20px">
+                <button type="button" class="btn btn-info" style="padding: 3px 12px" ng-click="onAreaChartConfirmClk()">确认</button>
+            </div>
+        </div>
+
+        <div style="display: flex;align-items: center">
+            <div style="">
+                <span style="border-right: #668b8c 1px solid;padding-right:10px;cursor: pointer " ng-click="onClkAlmPieDate('day')" ng-class="dataTypeDay">今日</span>
+                <span style="border-right: #668b8c 1px solid;padding-right:10px;cursor: pointer " ng-click="onClkAlmPieDate('week')" ng-class="dataTypeWeek">本周</span>
+                <span style="margin-left: 10px;cursor: pointer" ng-click="onClkAlmPieDate('month')" ng-class="dataTypeMonth">本月</span>
+            </div>
+            <div style="margin-left: 20px">
+                <div class='input-group date' id='data-piechart-datetimepicker1-start'
+                     style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#data-piechart-datetimepicker1-start').datetimepicker({
+                            format: 'YYYY-MM-DD HH:mm',
+                            date: new Date()
+                        });
+                    });
+                </script>
+          </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;height: calc(100% - 46px);display: flex">
+        <div style="width: 140px;border-right: 1px solid #666;padding: 20px;line-height: normal">
+            <div>
+                最高值
+            </div>
+            <div style="font-size: 28px;font-weight: 500">
+                4320
+            </div>
+            <div style="margin-top: 50px">
+                最低值
+            </div>
+            <div style="font-size: 28px;font-weight: 500">
+                342
+            </div>
+        </div>
+        <div style="flex: 1 0 auto;height: 100%;color: #ccc">
+            <div style="height: 40px;width: 100%;display: flex;align-items: center;justify-content: flex-end">
+                <div>设备名称：</div>
+                <div style="margin-left: 10px">
+                    <select style="color:#000000;height: 25px;background-color: #0c5460">
+                        <option style="background-color: #6b78dd">
+                            温度检测
+                        </option>
+                        <option style="background-color: #1a75dd">
+                            湿度检测
+                        </option>
+                        <option style="background-color: #1a75dd">
+                            液位检测
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div style="width: 100%;height: 30px;font-weight: bold;font-size: 14px;padding-left:20px">
+                氧气浓度曲线
+            </div>
+            <div  ng-echarts    ec-config="metricAreaConfig" ec-option="metricAreaOption"
+                  style="width: 100%;height: calc( 100% - 70px )" id="sndata-metric">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;height: 450px;border: 1px solid #666;border-radius: 4px;margin-top: 10px;padding: 10px">
+    <div style="width: 100%;height: 40px;display: flex;align-items:flex-end;border-bottom: 1px solid;padding-bottom: 10px ">
+        <div style="margin-left: 10px">
+            <button type="button" class="btn btn-info" style="padding: 3px 12px" ng-click="onTableExportClk()">导出</button>
+        </div>
+        <div style="display: flex;align-items: flex-end;margin-left: 10px">
+            <div>共搜索到922条数据</div>
+        </div>
+
+
+
+    </div>
+    <div class="horizontal-scroll">
+        <table class="table" st-table="smartTableData">
+            <thead>
+            <tr >
+                <th class="table-id" st-sort="id" st-sort-default="true">编号</th>
+                <th st-sort="warehouse">仓位</th>
+                <th st-sort="requirementName">设备名称</th>
+                <th st-sort="count">数值</th>
+                <th st-sort="pickTime">获取时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in smartTableData">
+                <td class="table-id">{{item.id}}</td>
+                <td>{{item.warehouse}}</td>
+                <td>{{item.requirementName}}</td>
+                <td>{{item.count}}</td>
+                <td>{{item.pickTime}}</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="6" class="text-center">
+                    <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<div style="width: 100%;height: 45px;margin-top:5px;display: flex;">
+    <div style="width:450px;height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;justify-content: space-around">
+        <div>快速进入：</div>
+        <div>
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #6b78dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">进入分区</button>
+        </div>
+    </div>
+
+    <div style="height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;">
+        <div style="margin-left: 20px">快速查询：</div>
+        <div style="margin-left: 20px">
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div style="margin-left: 20px">起始时间：</div>
+        <div style="margin-left: 20px">
+
+            <div class='input-group date' id='data-datetimepicker1-start'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#data-datetimepicker1-start').datetimepicker({
+                        format: 'YYYY-MM-DD HH:mm',
+                        date: new Date()
+                    });
+                });
+            </script>
+        </div>
+        <div style="margin-left: 20px">结束时间：</div>
+        <div style="margin-left: 20px">
+
+            <div class='input-group date' id='data-datetimepicker1-end'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#data-datetimepicker1-end').datetimepicker({
+                        format: 'YYYY-MM-DD HH:mm',
+                        date: new Date()
+                    });
+                });
+            </script>
+        </div>
+
+    </div>
+
+    <div style="display: flex;align-items: center">
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">查询</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" style="padding: 3px 12px">导出</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" disabled="disabled" style="padding: 3px 12px">删除</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<style>
+    .almpie-date-type-color-select{
+        color:#1a75dd
+    }
+
+    .almpie-date-type-color{
+        color:#fff
+    }
+</style>
+
+<div style="width: 100%;height: 330px;background-color: #1d2b36;padding: 0px 10px;box-sizing: border-box;
+display: flex;flex-direction: column;border: 1px solid #666">
+    <div style="font-size: 13px;display: flex;justify-content: space-between;flex:1 0 auto;
+    margin-top: 5px;color: #ccc;border-bottom: 1px solid #666;align-items: center">
+        <div style="font-size: 16px;font-weight: bold">预警处理比例</div>
+        <div style="">
+            <span style="border-right: #668b8c 1px solid;padding-right:10px;cursor: pointer " ng-click="onClkAlmPieDate('day')" ng-class="dataTypeDay">今日</span>
+            <span style="border-right: #668b8c 1px solid;padding-right:10px;cursor: pointer " ng-click="onClkAlmPieDate('week')" ng-class="dataTypeWeek">本周</span>
+            <span style="margin-left: 10px;cursor: pointer" ng-click="onClkAlmPieDate('month')" ng-class="dataTypeMonth">本月</span>
+        </div>
+    </div>
+    <div ng-echarts style="width:100%;height:280px;"  ec-config="almStatusPieConfig" ec-option="almStatusPieOption"  id="almStatusPie"></div>
+</div>

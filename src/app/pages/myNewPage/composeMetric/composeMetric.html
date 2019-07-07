@@ -1,0 +1,86 @@
+<div style="width:100%;height: 100%;border: 1px solid rgb(102,102,102);border-radius: 4px;
+color:#ccc;font-size: 12px;">
+    <div style="width: 100%;height: 30px;border-bottom:  1px solid rgb(102,102,102);display: flex;
+    justify-content: space-between;align-items: center;padding-left: 4px;padding-right: 4px;">
+        <div style="">宝塔区-燃气舱-1区（桩：200）监测点</div>
+        <div style="display: flex;flex:0 0 66px;justify-content: space-around">
+            <div ng-click="onEnterWarehouse()" style="cursor: pointer;"><img style="width: 16px;height: 16px" src="assets/img/u16.png"></div>
+            <div ng-click="onRefreshMetric()"  style="cursor: pointer;"><img style="width: 16px;height: 16px" src="assets/img/u15.png"></div>
+            <div style="cursor: pointer;"><img style="width: 16px;height: 16px" src="assets/img/u37.png"></div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 30px;border-bottom:1px solid rgb(102,102,102);display: flex;justify-content: space-between;padding-left: 4px;padding-right: 4px">
+        <div style="display: flex;align-items: center">
+            <div style="margin-right: 4px"><img style="width: 16px;height: 16px" src="assets/img/u19.png"></div>
+            <div>5分钟前</div>
+        </div>
+
+        <div style="display: flex;align-items: center">
+            <div style="margin-right: 4px">数据</div>
+            <div>
+                <select style="background-color: #0c5460">
+                    <option>
+                        1区(桩：200)
+                    </option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+    <div style="width: 100%;height:calc(100% - 60px);box-sizing: border-box;">
+        <!--<div ng-echarts style="width: 100%;height: 100%" ec-config="composeMetricConfig"-->
+             <!--ec-option="composeMetricOption"-->
+             <!--id="composeMetric"></div>-->
+        <!--<compose-metric-guage></compose-metric-guage>-->
+
+
+        <div style="width: 100%;height: 100%;position: relative">
+            <div ng-echarts style="width: 100%;height: 100%;" ec-config="composeMetricConfig" ec-option="composeMetricOption">
+
+            </div>
+            <div>
+
+            </div>
+
+            <div style="position: absolute;top:calc( 50% - 50px);left: 45%;z-index: 100;width: 20px;height: 90px;">
+                <div style="width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: space-between">
+
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                </div>
+                <div style="font-size: 12px;color: #ff632d;position:absolute;left: 0px;top:30%">
+                    0.2
+                </div>
+            </div>
+
+
+            <div style="position: absolute;top:calc( 50% - 50px);right: 45%;z-index: 100;width: 20px;height: 90px;">
+                <div style="width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: space-between">
+
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item-bg"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                    <div class="water-level-item"></div>
+                </div>
+                <div style="font-size: 12px;color: #ff632d;position:absolute;left: 0px;top:30%">
+                    0.2
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

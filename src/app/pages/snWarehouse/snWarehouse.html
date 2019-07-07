@@ -1,0 +1,286 @@
+<div style="width: 100%;height: 900px;display: flex">
+    <div style="height: 100%;flex: 1 0 auto;">
+        <div style="width: 100%;height: 420px;display: flex">
+            <div style="height: 100%;flex: 1 0 auto;margin-right: 10px">
+                <div id="slider1_container" style="position: relative; top: 20px; left: calc( 50% - 400px); width: 800px;
+        height: 380px; ">
+
+                    <div data-u="slides" style="position: absolute; left: 0px; top: 0px;
+                    width: 800px; height: 380px;
+            overflow: hidden;">
+                        <div><img data-u="image" src="assets/img/warehouse/slide-1.png"/></div>
+                        <div><img data-u="image" src="assets/img/warehouse/slide-2.png"/></div>
+                    </div>
+
+                    <style>
+                        .jssora051 {
+                            display: block;
+                            position: absolute;
+                            cursor: pointer;
+                        }
+
+                        .jssora051 .a {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 360px;
+                            stroke-miterlimit: 10;
+                        }
+
+                        .jssora051:hover {
+                            opacity: .8;
+                        }
+
+                        .jssora051.jssora051dn {
+                            opacity: .5;
+                        }
+
+                        .jssora051.jssora051ds {
+                            opacity: .3;
+                            pointer-events: none;
+                        }
+                    </style>
+                    <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:-30px;"
+                         data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                        <svg viewBox="0 0 16000 16000"
+                             style="position:absolute;top:0;left: 0px;width:100%;height:100%;">
+                            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                        </svg>
+                    </div>
+                    <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:-25px;"
+                         data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 130px;height: 100%;background-color: #1d2b36;box-sizing: border-box;line-height: normal">
+                <div style="width: 100%;height: 140px;border-bottom: 1px solid #666;;padding: 25px 0 0px 28px">
+                    <div style="color: #fff;font-size: 20px">设备数</div>
+                    <div style="display: flex; ">
+                        <div style="font-size: 48px;color: #1884e7;">
+                            10
+                        </div>
+                        <div style="font-size: 12px;color: #fff;align-self: flex-end;margin-bottom: 5px">个</div>
+                    </div>
+                </div>
+                <div style="width: 100%;height: 140px;border-bottom: 1px solid #666;;padding: 25px 0 0px 28px">
+                    <div style="color: #fff;font-size: 20px">预警数</div>
+                    <div style="display: flex; ">
+                        <div style="font-size: 48px;color: #ff9900;">
+                            10
+                        </div>
+                        <div style="font-size: 12px;color: #fff;align-self: flex-end;margin-bottom: 5px">个</div>
+                    </div>
+                </div>
+                <div style="width: 100%;height: 140px;;padding: 25px 0 0px 28px">
+                    <div style="color: #fff;font-size: 20px">就地控制数</div>
+                    <div style="display: flex; ">
+                        <div style="font-size: 48px;color: #ff0000;">
+                            10
+                        </div>
+                        <div style="font-size: 12px;color: #fff;align-self: flex-end;margin-bottom: 5px">台</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;height: calc(100% - 430px);border: 1px solid #666;margin-top: 10px;box-sizing: border-box;padding-right: 10px">
+            <div style="width: 100%;height: 46px;display: flex;align-items: center;border-bottom: 1px solid #666">
+                <div style="display: flex;align-items: center;flex: 1 0 auto;margin-left: 10px;font-size: 16px;font-weight: bold">
+                    历史数据检测数据曲线
+                </div>
+
+                <div style="display: flex;align-items: center">
+                    <div style="">
+                        <span style="color: #1a75dd;border-right: #668b8c 1px solid;padding-right:10px ">今日</span>
+                        <span style="color: #1a75dd;border-right: #668b8c 1px solid;padding-right:10px ">本周</span>
+                        <span style="color: #ffffff;margin-left: 10px">本月</span>
+                    </div>
+                    <div style="margin-left: 20px">
+                        <div class='input-group date' id='warehouse-piechart-datetimepicker'
+                             style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                            <input type='text' class="form-control"/>
+                            <span class="input-group-addon  sn-calendar-icon-color">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;height: calc(100% - 46px);display: flex">
+                <div style="width: 160px;border-right: 1px solid #666;padding: 20px;line-height: normal">
+                    <div style="color:#ccc;font-size: 12px;font-family: 微软雅黑">
+                        <div style="">最高值</div>
+                        <div style="font-size: 28px">54,323</div>
+                        <div style="display: flex;align-items: center;">
+                            <div style=" width:0;height:0;border-width:7px 7px 0px;border-style:solid;border-color:#f04133 transparent transparent;">
+                            </div>
+                            <div style="color: #f04133;margin-left: 5px">8%</div>
+                            <div style="margin-left:3px">与规定相比</div>
+                        </div>
+                    </div>
+                    <div style="color:#ccc;font-size: 12px;font-family: 微软雅黑;margin-top: 30px">
+                        <div style="">最低值</div>
+                        <div style="font-size: 28px">54,323</div>
+                        <div style="display: flex;align-items: center;">
+                            <div style=" width:0;height:0;border-width:0 7px 7px 7px;border-style:solid;border-color:transparent transparent #00a950 transparent;">
+                            </div>
+                            <div style="color: #00a950;margin-left: 5px">8%</div>
+                            <div style="margin-left:3px">与规定相比</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 1 0 auto;height: 100%;color: #ccc">
+                    <div style="height: 40px;width: 100%;display: flex;align-items: center;justify-content: flex-end">
+                        <div>设备名称：</div>
+                        <div style="margin-left: 10px">
+                            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                                <option style="background-color: #6b78dd">
+                                    温度检测
+                                </option>
+                                <option style="background-color: #1a75dd">
+                                    湿度检测
+                                </option>
+                                <option style="background-color: #1a75dd">
+                                    液位检测
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width: 100%;height: 30px;font-weight: bold;font-size: 14px;padding-left:20px">
+                        氧气浓度曲线
+                    </div>
+                    <div ng-echarts ec-config="warehouseAreaConfig" ec-option="warehouseAreaOption"
+                         style="width: 100%;height: calc( 100% - 70px )" id="warehouse-metric">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 100%;width: 600px;margin-left: 10px">
+        <div style="width: 100%;height: 330px;border: 1px solid #666">
+            <div style="width: 100%;height: 40px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ccc;padding:0px 5px">
+                <div>宝塔区-燃气舱-1区（桩：200）监测点</div>
+                <div>
+                    <i class="ion-refresh" style="font-size: 18px;font-weight: 400"></i>
+                </div>
+            </div>
+            <div style="width: 100%;height: calc(100% - 40px)">
+                <compose-metric-guage></compose-metric-guage>
+            </div>
+
+        </div>
+        <div style="width: 100%; height:calc(100% - 340px);border: solid 1px #666;padding: 0px 5px;margin-top: 10px">
+
+            <div style="width: 100%;height: 40px;line-height: 40px;font-size: 16px;border-bottom: #ccc solid 1px">
+                设备控制
+            </div>
+
+            <div style="width: 100%;">
+                <div class="horizontal-scroll">
+                    <table class="table" st-table="smartTableData">
+                        <thead>
+                        <tr>
+                            <th class="table-id" st-sort="id" st-sort-default="true">序号</th>
+                            <th st-sort="requirementName">设备名称</th>
+                            <th st-sort="count">状态</th>
+                            <th st-sort="pickTime">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in smartTableData">
+                            <td class="table-id">{{item.id}}</td>
+                            <td>{{item.requirementName}}</td>
+                            <td>{{item.status}}</td>
+                            <td>
+                                <ba-switcher switcher-style="primary" switcher-value="true"></ba-switcher>
+                                <ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+                                <ba-switcher switcher-style="primary" switcher-value="true"></ba-switcher>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="6" class="text-center">
+                                <div st-pagination="" st-items-by-page="smartTablePageSize"
+                                     st-displayed-pages="5"></div>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div style="width: 100%;height: 45px;margin-top:5px;display: flex;">
+    <div style="width:450px;height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;justify-content: space-around">
+        <div>快速进入：</div>
+        <div>
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #6b78dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">进入分区</button>
+        </div>
+    </div>
+
+    <div style="height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;">
+        <div style="margin-left: 20px">快速查询：</div>
+        <div style="margin-left: 20px">
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div style="margin-left: 20px">起始时间：</div>
+        <div style="margin-left: 20px">
+
+            <div class='input-group date' id='warehouse-datetimepicker1-start'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon  sn-calendar-icon-color">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <div style="margin-left: 20px">结束时间：</div>
+        <div style="margin-left: 20px">
+            <div class='input-group date' id='warehouse-datetimepicker1-end'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon  sn-calendar-icon-color">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="display: flex;align-items: center">
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">查询</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" style="padding: 3px 12px">导出</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" disabled="disabled" style="padding: 3px 12px">删除</button>
+        </div>
+    </div>
+</div>

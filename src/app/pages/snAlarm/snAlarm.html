@@ -1,0 +1,96 @@
+<div style="width: 100%;height: 330px;display: flex">
+    <div alm-static-card></div>
+
+    <div alm-status-pie style="margin-left: 10px;flex: 1 0 auto"></div>
+</div>
+
+<div alm-table></div>
+
+<div style="width: 100%;height: 45px;margin-top:5px;display: flex;">
+    <div style="width:450px;height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;justify-content: space-around">
+        <div>快速进入：</div>
+        <div>
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #6b78dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">进入分区</button>
+        </div>
+    </div>
+
+    <div style="height: 100%;display: flex;background-color: rgb(29,43,54);align-items: center;padding:0 10px;">
+        <div style="margin-left: 20px">快速查询：</div>
+        <div style="margin-left: 20px">
+            <select style="color:#000000;height: 25px;background-color: #0c5460">
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+                <option style="background-color: #1a75dd">
+                    宝塔区 / 燃气舱 / 1区（桩：200）
+                </option>
+            </select>
+        </div>
+        <div style="margin-left: 20px">起始时间：</div>
+        <div style="margin-left: 20px">
+
+            <div class='input-group date' id='alarm-datetimepicker1-start'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon  sn-calendar-icon-color">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#alarm-datetimepicker1-start').datetimepicker({
+                        format: 'YYYY-MM-DD HH:mm',
+                        date: new Date()
+                    });
+                });
+            </script>
+        </div>
+        <div style="margin-left: 20px">结束时间：</div>
+        <div style="margin-left: 20px">
+
+            <!--<div style="position: fixed;left: 100px;top:100px;color:#000;border: 1px solid red">-->
+            <div class='input-group date' id='alarm-datetimepicker1-end'
+                 style="width: 200px;height: 35px;margin-bottom: 0px;color: #000">
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon  sn-calendar-icon-color">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#alarm-datetimepicker1-end').datetimepicker({
+                        format: 'YYYY-MM-DD HH:mm',
+                        date: new Date()
+                    });
+                });
+            </script>
+            <!--</div>-->
+        </div>
+
+    </div>
+
+    <div style="display: flex;align-items: center">
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-info" style="padding: 3px 12px">查询</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" style="padding: 3px 12px">导出</button>
+        </div>
+        <div style="margin-left: 20px">
+            <button type="button" class="btn btn-default" disabled="disabled" style="padding: 3px 12px">删除</button>
+        </div>
+    </div>
+</div>
+
+
+
